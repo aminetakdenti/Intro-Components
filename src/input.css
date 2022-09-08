@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add Font Family To The Hole Text */
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Add Background Image To the Body */
+body {
+  background-image: url("../images/bg-intro-desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: hsla(0, 100%, 74%, 0.9);
+  min-height: 100%;
+  min-width: 100%;
+}
+
+@media (max-width: 480px) {
+  body {
+    background-image: url("../images/bg-intro-mobile.png");
+  }
+}
+
+/* Styling input component */
+@layer components {
+  input {
+    @apply text-lg font-bold rounded w-full py-3 pl-4 border-solid border-4 relative placeholder:transition
+    focus:placeholder:opacity-0 border-GrayishBlue outline-none;
+  }
+}
+
+/* Create Title Shadow Component */
+.title-shadow {
+  box-shadow: 0px 10px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Create Btn Shadow Component */
+.btn-shadow {
+  box-shadow: 0px 5px 3px 0 hsla(154, 59%, 51%, 0.7);
+}
+
+/* -------------------------- Create Errore Styling ------------------------- */
+
+div > input + img {
+  position: absolute;
+  right: 10px;
+  bottom: 50%;
+  transform: translateY(50%);
+  display: none;
+}
+
+div > input.errore + img {
+  display: block;
+}
+
+div > input + img + p {
+  position: absolute;
+  font-size: 12px;
+  color: hsl(0, 100%, 74%);
+  bottom: -18px;
+  font-style: italic;
+  display: none;
+}
+
+div > input.errore + img + p {
+  display: block;
+}
+
+input.errore {
+  border-color: hsl(0, 100%, 74%);
+}

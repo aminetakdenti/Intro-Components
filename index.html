@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Intro component with sign up form</title>
+    <!-- Css File Link -->
+    <link rel="stylesheet" href="./dist/main.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Section -->
+    <section
+      class="container min-h-screen mx-auto space-y-10 flex flex-col items-center justify-between p-6 z-10 md:flex-row md:space-y-0">
+      <div class="flex items-center justify-center z-10 md:w-1/2">
+        <div
+          class="flex flex-col max-w-2xl justify-center text-center md:text-start">
+          <h1 class="text-4xl font-bold leading-{1.2} text-white md:text-6xl">
+            Learn to code by watching others
+          </h1>
+          <p class="text-xl mt-10 text-white leading-normal">
+            See how experienced developers solve problems in real-time. Watching
+            scripted tutorials is great, but understanding how developers think
+            is invaluable.
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-col space-y-6 z-10 md:w-5/12 md:mx-auto">
+        <div
+          class="title-shadow flex items-center justify-center py-4 px-6 rounded-lg bg-Blue shadow-2xl">
+          <p class="max-w-xl text-xl text-center font-bold text-white">
+            Try it free 7 days
+            <span class="text-lg font-light">then $20/mo. thereafter</span>
+          </p>
+        </div>
+        <form action="" class="bg-white space-y-8 rounded-lg p-10">
+          <div class="relative">
+            <input id="first-name" type="text" placeholder="First Name" />
+            <img src="images/icon-error.svg" alt="" />
+            <p class="">First Name cannot be empty</p>
+          </div>
+          <div class="relative">
+            <input id="last-name" type="text" placeholder="Last Name" />
+            <img src="images/icon-error.svg" alt="" />
+            <p>Last Name cannot be empty</p>
+          </div>
+          <div class="relative">
+            <input id="email" type="email" placeholder="Email Adress" />
+            <img src="images/icon-error.svg" alt="" />
+            <p>Looks like this is not an email</p>
+          </div>
+          <div class="relative">
+            <input id="password" type="password" placeholder="Password" />
+            <img src="images/icon-error.svg" alt="" />
+            <p>Password cannot be empty</p>
+          </div>
+          <input
+            id="btn"
+            type="submit"
+            class="btn-shadow border-none text-white font-bold bg-Green cursor-pointer transition-all hover:bg-Green-Hover"
+            value="Claim your free trial" />
+          <p class="text-sm text-center text-black">
+            By clicking the button, you are agreeing to our
+            <span class="font-bold text-Red">Terms and Services </span>
+          </p>
+        </form>
+      </div>
+    </section>
+    <!-- Js File -->
+    <script src="js/index.js"></script>
+  </body>
+</html>
